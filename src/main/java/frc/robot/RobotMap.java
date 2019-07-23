@@ -14,13 +14,54 @@ package frc.robot;
  * floating around.
  */
 public class RobotMap {
-  // For example to map the left and right motors, you could define the
-  // following variables to use with your drivetrain subsystem.
-  // public static int leftMotor = 1;
-  // public static int rightMotor = 2;
 
-  // If you are using multiple modules, make sure to define both the port
-  // number and the module. For example you with a rangefinder:
-  // public static int rangefinderPort = 1;
-  // public static int rangefinderModule = 1;
+    public interface CAN {
+        public static final int DRIVETRAIN_MOTOR_LEFT1 = 5;
+        public static final int DRIVETRAIN_MOTOR_LEFT2 = 6;
+        public static final int DRIVETRAIN_MOTOR_RIGHT1 = 4;
+        public static final int DRIVETRAIN_MOTOR_RIGHT2 = 1;
+
+        public static final int LIFT_MOTOR1 = 0;
+        public static final int LIFT_MOTOR2 = 3;
+        public static final int LIFT_MOTOR3 = 2;
+        public static final int LIFT_ENCODER = 8;
+    }
+
+    public interface DIO {
+        public static final int LIFT_LIMIT_UP = 9;
+        public static final int LIFT_LIMIT_DOWN = 8;
+
+        public static final int DRIVETRAIN_ENCODER_RIGHT1 = 2;
+        public static final int DRIVETRAIN_ENCODER_RIGHT2 = 3;
+        public static final int DRIVETRAIN_ENCODER_LEFT1 = 0;
+        public static final int DRIVETRAIN_ENCODER_LEFT2 = 1;
+
+        public static final int GRIPPER_LIMIT = 6;
+
+        public static final int ARM_LIMIT1 = 4;
+        public static final int ARM_LIMIT2 = 5;
+
+        //public static final int LATCH_LIMIT = 6;
+    }
+
+    public interface PWM {
+
+        public static final int GRIPPER_MOTOR_1 = 0;
+        public static final int GRIPPER_MOTOR_2 = 1;
+
+        public static final int ARM_MOTOR = 2;
+
+        public static final int LATCH_MOTOR = 9;
+    }
+
+    public static interface ANALOG_IN {
+        public static final int GRIPPER_LASER_SENSOR = 2;
+        public static final int ARM_POTENTIOMETER = 0;
+    }
+
+    public static interface USB{
+        public static final int FRONT_CAM = 0;
+        public static final int BACK_CAM = 1;
+    }
+
 }
